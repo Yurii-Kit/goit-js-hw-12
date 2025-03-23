@@ -88,14 +88,14 @@ button[type='submit']:hover {
   }
 }
 
-.js-gallery {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   justify-content: center;
   align-items: center;
 }
-.js-gallery li {
+.gallery li {
   /* width: calc((100% - 24px * 2) / 3); */
   box-sizing: border-box;
   width: 360px;
@@ -139,4 +139,27 @@ b {
   line-height: 1.33333;
   letter-spacing: 0.04em;
   color: #2e2f42;
+}
+
+.load-more {
+  display: block;
+
+  margin: 20px auto;
+
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: auto;
+  height: 42px;
+
+  background: #4e75ff;
+  border: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+.load-more:hover {
+  background: #6c8cff;
 }

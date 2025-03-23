@@ -1,15 +1,11 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
 
 const gallery = document.querySelector('.gallery');
 let lightbox = null;
 
 // Функція для рендерингу галереї
 export function renderGallery(images) {
-  clearGallery();
-
   const markup = images
     .map(
       ({
@@ -57,4 +53,15 @@ export function showLoader() {
 
 export function hideLoader() {
   document.querySelector('.loader').style.display = 'none';
+}
+// Плавне прокручування сторінки
+export function scrollPage() {
+  const { height } = document
+    .querySelector('.gallery')
+    .firstElementChild.getBoundingClientRect();
+
+  window.scrollBy({
+    top: height * 2,
+    behavior: 'smooth',
+  });
 }
